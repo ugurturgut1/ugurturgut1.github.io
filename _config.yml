@@ -1,0 +1,6 @@
+title: Ugur Turgut
+permalink: /writeups/:title/
+defaults:
+  - scope: { type: posts }
+    values: { layout: writeup }
+exclude: [README.md]

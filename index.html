@@ -1,206 +1,242 @@
+---
+---
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ugur Turgut</title>
-<meta name="description" content="Ugur Turgut: Computer Science student at the University of Manchester working on security tooling, hardware attacks and software engineering.">
+<meta name="description" content="Ugur Turgut, final-year Computer Science student at the University of Manchester working on security tooling, hardware security and software engineering.">
+<link rel="icon" href="avatar.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #fbfbfa; --fg: #1b1d21; --muted: #5f6570; --line: #e4e4e0;
-  --card: #ffffff; --accent: #0f766e; --accent-soft: #e6f3f1;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #0f1114; --fg: #e8e9ec; --muted: #9aa1ad; --line: #24282f;
-          --card: #161a1f; --accent: #2dd4bf; --accent-soft: #11302d; }
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--bg); color: var(--fg);
-  font: 16px/1.65 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-nav { position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 85%, transparent);
-  backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); z-index: 1; }
-nav .wrap { display: flex; gap: 20px; align-items: center; height: 54px; overflow-x: auto; }
-nav a { color: var(--muted); font-size: 14px; white-space: nowrap; }
-nav a.brand { color: var(--fg); font-weight: 600; margin-right: auto; }
-header { padding: 72px 0 40px; }
-.mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
-.kicker { color: var(--accent); font-size: 13px; letter-spacing: .02em; }
-h1 { font-size: clamp(34px, 6vw, 46px); line-height: 1.1; margin: 10px 0 16px; letter-spacing: -.02em; }
-.lede { font-size: 18px; color: var(--muted); max-width: 60ch; margin: 0; }
-.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
-.btn { border: 1px solid var(--line); background: var(--card); color: var(--fg);
-  padding: 8px 14px; border-radius: 8px; font-size: 14px; font-weight: 500; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-.btn:hover { text-decoration: none; border-color: var(--accent); }
-section { padding: 36px 0; border-top: 1px solid var(--line); }
-h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
-  margin: 0 0 22px; font-weight: 600; }
-.item { margin-bottom: 26px; }
-.item:last-child { margin-bottom: 0; }
-.row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
-.item h3 { font-size: 17px; margin: 0; font-weight: 600; }
-.role { color: var(--muted); font-size: 15px; }
-.date { color: var(--muted); font-size: 13px; }
-.item p, .item ul { margin: 6px 0 0; color: var(--fg); }
-.item ul { padding-left: 18px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
-.card h3 { margin: 0 0 6px; font-size: 16px; }
-.card p { margin: 0 0 12px; color: var(--muted); font-size: 14.5px; }
-.tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.tag { background: var(--accent-soft); color: var(--accent); font-size: 12px; padding: 2px 8px; border-radius: 99px; }
-.stat { font-size: 26px; font-weight: 700; letter-spacing: -.02em; }
-footer { padding: 36px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-@media print { nav, .links { display: none; } section { break-inside: avoid; } }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav><div class="wrap">
-  <a class="brand" href="#">Ugur Turgut</a>
-  <a href="#about">About</a><a href="#experience">Experience</a>
-  <a href="#projects">Projects</a><a href="#honours">Honours</a><a href="#contact">Contact</a>
+  <a class="home" href="#"><span>~/</span>ugur</a>
+  <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
+  <a href="#ctf">CTF</a><a href="#writeups">Writeups</a><a href="#contact">Contact</a>
 </div></nav>
 
 <main class="wrap">
-<header>
-  <div class="kicker mono">BSc Computer Science · University of Manchester · 2027</div>
-  <h1>Ugur Turgut</h1>
-  <p class="lede">I build security tools and break things on purpose: scanners for AI agent servers,
-  hardware rigs for replicating published attacks, and production apps on the side.</p>
-  <div class="links">
-    <a class="btn primary" href="cv.pdf">Download CV</a>
-    <a class="btn" href="https://github.com/ugurturgut1">GitHub</a>
-    <a class="btn" href="https://linkedin.com/in/turgut-ugur">LinkedIn</a>
-    <a class="btn" href="mailto:turgutugur00@gmail.com">Email</a>
+<header class="hero">
+  <div>
+    <div class="prompt"><b>ugur@manchester</b>:~$ whoami</div>
+    <h1>Ugur Turgut</h1>
+    <p class="lede">Final-year Computer Science student at the University of Manchester. I work across security tooling,
+    hardware security and software engineering, and spend most weekends on CTFs.</p>
+    <div class="actions">
+      <a class="btn primary" href="cv.pdf">Download CV</a>
+      <a class="btn" href="https://github.com/ugurturgut1">GitHub</a>
+      <a class="btn" href="https://linkedin.com/in/turgut-ugur">LinkedIn</a>
+    </div>
+    <div class="pill">Open to 2027 graduate roles · Manchester or London</div>
+  </div>
+  <div class="avatar">
+    <img src="avatar.jpg" alt="Photo of Ugur Turgut" width="168" height="168">
   </div>
 </header>
 
+<figure class="scope" aria-label="Stylised oscilloscope trace of an HPGP preamble burst">
+  <svg id="trace" viewBox="0 0 800 180" aria-hidden="true"></svg>
+  <div class="sweep"></div>
+  <figcaption><span><b>CH1</b> HPGP preamble · BrokenWire kit</span><span>500 mV/div · 2 µs/div</span></figcaption>
+</figure>
+
 <section id="about">
+  <div class="label">~/about</div>
   <h2>About</h2>
-  <p>I'm a final-year Computer Science student at the University of Manchester (Year 2 average 71/100,
-  predicted First). Most of what I do sits where software meets security: I compete in CTFs with
-  Hackchester, run beginner workshops on web exploitation, and spent summer 2026 on research
-  internships evaluating GDPR controls in digital health and building FPGA hardware for the
-  BrokenWire EV-charging attack.</p>
-  <p>I'm looking for graduate roles in software engineering and cybersecurity, ideally in Manchester or London.</p>
+  <p>I'm a final-year Computer Science student at the University of Manchester, graduating in July 2027. Most of my work
+  ends up somewhere between software and security, usually because one problem leads me into the next. A CTF challenge
+  gets me reading firmware, and a firmware question gets me onto an oscilloscope.</p>
+  <p>This summer I did two research internships. At the University of Liverpool I evaluated a digital health platform
+  against GDPR, focusing on access control and API authentication. At Manchester's School of Engineering I helped build
+  FPGA hardware to replicate the BrokenWire attack on EV charging. I'm now looking for graduate roles in cybersecurity
+  and software engineering.</p>
+  <div class="facts">
+    <div><b>71/100</b><span>Year 2 average</span></div>
+    <div><b>3</b><span>internships, 2026</span></div>
+    <div><b>Top 1.4%</b><span>best CTF finish</span></div>
+    <div><b>1st</b><span>Great Uni Hack CTF</span></div>
+  </div>
 </section>
 
 <section id="experience">
+  <div class="label">~/experience</div>
   <h2>Experience</h2>
-
-  <div class="item">
-    <div class="row"><h3>University of Liverpool, Institute of Population Health</h3><span class="date">Jun – Aug 2026</span></div>
-    <div class="role">Research Intern, Health Data Privacy &amp; Security</div>
-    <ul>
-      <li>GDPR-focused security and privacy evaluation of a digital health platform for a multi-institution clinical research collaboration.</li>
-      <li>Built and assessed role-based access control (RBAC) and JWT API authentication components.</li>
-      <li>Co-authoring a peer-reviewed commentary on GDPR compliance and cybersecurity in digital health.</li>
-    </ul>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>University of Manchester, School of Engineering</h3><span class="date">Jun – Aug 2026</span></div>
-    <div class="role">Departmental Summer Research Intern</div>
-    <ul>
-      <li>Helped build a handheld FPGA-based kit to replicate the BrokenWire attack (NDSS '23) on EV charging.</li>
-      <li>Wrote the Verilog logic, built bitstreams with Project IceStorm, and verified the HPGP preamble waveform with Python.</li>
-      <li>Selected components from datasheets and validated the design on breadboard and oscilloscope.</li>
-    </ul>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Travel Radar</h3><span class="date">Jun – Aug 2026</span></div>
-    <div class="role">App Development Intern · Remote</div>
-    <p>Shipped new features for a production mobile app in Flutter/Dart within a sprint-based Agile team.</p>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Hackchester</h3><span class="date">Nov 2025 – present</span></div>
-    <div class="role">Events Officer &amp; CTF Competitor</div>
-    <p>Run weekly beginner workshops on the OWASP Top 10 and web exploitation for the University of Manchester
-    cybersecurity society, and compete in national and international CTFs (Wireshark, Burp Suite, Volatility3, Ghidra).</p>
-  </div>
-
-  <div class="item">
-    <div class="row"><h3>Clevorra</h3><span class="date">Oct 2024 – Jul 2025</span></div>
-    <div class="role">Co-Founder, Data &amp; Content Lead (part-time)</div>
-    <p>Co-founded an AI-powered SAT/ACT/GRE prep platform and curated its 1,500+ question dataset
-    (<a href="https://clevorra.com">clevorra.com</a>).</p>
-  </div>
+  <ol class="timeline">
+    <li>
+      <div class="when">Jun 2026 – Aug 2026</div>
+      <h3>University of Liverpool, Institute of Population Health</h3>
+      <div class="role">Research Intern, Health Data Privacy &amp; Security</div>
+      <ul>
+        <li>Evaluated the security and privacy of a digital health platform against GDPR, as part of a research collaboration across several institutions.</li>
+        <li>Built and assessed role-based access control (RBAC) and JWT API authentication components.</li>
+      </ul>
+    </li>
+    <li>
+      <div class="when">Jun 2026 – Aug 2026</div>
+      <h3>University of Manchester, School of Engineering</h3>
+      <div class="role">Departmental Summer Research Intern</div>
+      <ul>
+        <li>Helped build a handheld FPGA kit to replicate the BrokenWire attack (NDSS '23) on EV charging communications.</li>
+        <li>Wrote the Verilog, built bitstreams with Project IceStorm, and checked the HPGP preamble waveform with Python.</li>
+        <li>Chose components from datasheets and validated the build on breadboard and oscilloscope.</li>
+      </ul>
+    </li>
+    <li>
+      <div class="when">Jun 2026 – Aug 2026</div>
+      <h3>Travel Radar</h3>
+      <div class="role">App Development Intern · Remote</div>
+      <p>Built new features for a production Flutter/Dart mobile app as part of a sprint-based Agile team.</p>
+    </li>
+    <li>
+      <div class="when">Nov 2025 – present</div>
+      <h3>Hackchester</h3>
+      <div class="role">Events Officer &amp; CTF Competitor</div>
+      <p>I run weekly beginner workshops on the OWASP Top 10 and web exploitation for the University of Manchester's
+      cybersecurity society, and compete for the society in national and international CTFs.</p>
+    </li>
+    <li>
+      <div class="when">Oct 2024 – Jul 2025</div>
+      <h3>Clevorra</h3>
+      <div class="role">Co-Founder, Data &amp; Content Lead (part-time)</div>
+      <p>Co-founded an AI-powered SAT, ACT and GRE prep platform and curated its dataset of over 1,500 questions
+      (<a href="https://clevorra.com">clevorra.com</a>).</p>
+    </li>
+  </ol>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">
+  <div class="label">~/projects</div>
+  <h2>Projects &amp; research</h2>
+  <div class="cards">
+    <article class="card">
       <h3><a href="https://github.com/ugurturgut1/mcp-scanner">MCP-Scanner</a></h3>
-      <p>Static and semantic analysis CLI that finds tool-poisoning and prompt-injection issues in Model Context Protocol servers.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">AI security</span><span class="tag">Open source</span></div>
-    </div>
-    <div class="card">
-      <h3>Bug Bounty Pipeline</h3>
-      <p>Multi-stage recon, testing and reporting pipeline across platform APIs, with a policy engine and human-approval gates.</p>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Automation</span></div>
-    </div>
-    <div class="card">
-      <h3><a href="https://github.com/ugurturgut1/Cowrie-Honeypot">Honeypot &amp; Logging Stack</a></h3>
-      <p>Cowrie SSH honeypot feeding an ELK pipeline (Filebeat, Logstash, Elasticsearch, Kibana) for attacker analysis.</p>
-      <div class="tags"><span class="tag">ELK</span><span class="tag">Blue team</span></div>
-    </div>
-    <div class="card">
+      <p>A Python CLI that uses static and semantic analysis to find tool-poisoning and prompt-injection issues in Model Context Protocol servers.</p>
+      <div class="tags"><span class="tag on">open source</span><span class="tag">Python</span><span class="tag">AI security</span></div>
+    </article>
+    <article class="card">
       <h3>BrokenWire Evaluation Kit</h3>
-      <p>Final-year project: a portable kit for evaluating the BrokenWire attack against CCS EV charging.</p>
-      <div class="tags"><span class="tag">Verilog</span><span class="tag">FPGA</span><span class="tag">Hardware security</span></div>
-    </div>
-    <div class="card">
-      <h3>Meal Dealer</h3>
-      <p>User-facing web platform; led development across frontend and backend workflows.</p>
-      <div class="tags"><span class="tag">Web</span><span class="tag">Full-stack</span></div>
-    </div>
+      <p>My final-year project: a portable kit for evaluating the BrokenWire attack against CCS EV charging.</p>
+      <div class="tags"><span class="tag on">in progress</span><span class="tag">Verilog</span><span class="tag">FPGA</span></div>
+    </article>
+    <article class="card">
+      <h3><a href="https://github.com/ugurturgut1/Cowrie-Honeypot">Honeypot &amp; Logging Stack</a></h3>
+      <p>A Cowrie SSH honeypot feeding Filebeat, Logstash, Elasticsearch and Kibana, which I use to study what attackers actually do once they're in.</p>
+      <div class="tags"><span class="tag on">open source</span><span class="tag">ELK</span><span class="tag">blue team</span></div>
+    </article>
+    <article class="card">
+      <h3>Bug Bounty Pipeline</h3>
+      <p>A multi-stage recon, testing and reporting pipeline across platform APIs, with a policy engine and human approval gates so the automation never goes beyond what's authorised.</p>
+      <div class="tags"><span class="tag">private</span><span class="tag">Python</span><span class="tag">automation</span></div>
+    </article>
+    <article class="card wide">
+      <h3>GDPR &amp; Cybersecurity in Digital Health</h3>
+      <p>A commentary I'm co-authoring on GDPR compliance and security in digital health applications, following on from my Liverpool internship.</p>
+      <div class="tags"><span class="tag on">in development</span><span class="tag">paper</span><span class="tag">privacy</span></div>
+    </article>
   </div>
 </section>
 
-<section id="honours">
-  <h2>Honours</h2>
-  <div class="grid">
-    <div class="card"><div class="stat">1st</div><p>Hackchester CTF Challenge, Great Uni Hackathon (Manchester)</p></div>
-    <div class="card"><div class="stat">12 / 837</div><p>DeadFace CTF</p></div>
-    <div class="card"><div class="stat">144 / 6,252</div><p>Industrial Intrusion CTF</p></div>
-    <div class="card"><div class="stat">951 / 8,130</div><p>Hack The Box Cyber Apocalypse 2025</p></div>
+<section id="ctf">
+  <div class="label">~/ctf</div>
+  <h2>CTF results</h2>
+  <div class="tblwrap"><table>
+    <tr><th>Event</th><th>Placed</th><th>Percentile</th></tr>
+    <tr><td>Hackchester CTF Challenge, Great Uni Hackathon</td><td class="num">1st</td><td><div class="bar"><i style="width:100%"></i></div></td></tr>
+    <tr><td>DeadFace CTF</td><td class="num">12 / 837</td><td><div class="bar"><i style="width:98.6%"></i></div></td></tr>
+    <tr><td>Industrial Intrusion CTF</td><td class="num">144 / 6,252</td><td><div class="bar"><i style="width:97.7%"></i></div></td></tr>
+    <tr><td>Hack The Box Cyber Apocalypse 2025</td><td class="num">951 / 8,130</td><td><div class="bar"><i style="width:88.3%"></i></div></td></tr>
+  </table></div>
+</section>
+
+<section id="interests">
+  <div class="label">~/interests</div>
+  <h2>Interests</h2>
+  <div class="interests">
+    <div><b>Hardware security</b><span>Fault injection, side channels and attacks on physical protocols.</span></div>
+    <div><b>Signal processing</b><span>DSP and RF, from generating waveforms to reading what's on the wire.</span></div>
+    <div><b>CTFs</b><span>Forensics, reverse engineering and web, mostly with Hackchester.</span></div>
+    <div><b>AI agent security</b><span>Prompt injection and tool poisoning in LLM tooling.</span></div>
+    <div><b>Embedded &amp; FPGA</b><span>Verilog, open-source toolchains and board bring-up.</span></div>
+    <div><b>Privacy engineering</b><span>Access control and data minimisation in practice.</span></div>
   </div>
 </section>
 
-<section id="education">
-  <h2>Education &amp; Skills</h2>
-  <div class="item">
-    <div class="row"><h3>University of Manchester</h3><span class="date">Sep 2024 – Jul 2027</span></div>
-    <div class="role">BSc Computer Science · Year 2 average 71/100</div>
-    <p>Data Structures &amp; Algorithms, Software Engineering, Computer Architecture, Distributed Systems.</p>
+<section id="skills">
+  <div class="label">~/skills</div>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><span class="k">languages</span><span>Python, Java, C, C++, Dart, JavaScript, SQL</span></div>
+    <div><span class="k">security</span><span>Burp Suite, Ghidra, Wireshark, Volatility3, OWASP Top 10, RBAC/JWT</span></div>
+    <div><span class="k">hardware</span><span>Verilog, FPGA (Project IceStorm), oscilloscope debugging, datasheet-driven design</span></div>
+    <div><span class="k">platforms</span><span>Spring Boot, Flutter, React, PostgreSQL, ELK stack, Linux</span></div>
   </div>
-  <div class="item">
-    <div class="tags">
-      <span class="tag">Python</span><span class="tag">Java / Spring Boot</span><span class="tag">C / C++</span>
-      <span class="tag">Verilog</span><span class="tag">Flutter / Dart</span><span class="tag">React</span>
-      <span class="tag">PostgreSQL</span><span class="tag">Linux</span><span class="tag">Burp Suite</span>
-      <span class="tag">Ghidra</span><span class="tag">Wireshark</span><span class="tag">ELK</span>
-    </div>
+</section>
+
+<section id="writeups">
+  <div class="label">~/writeups</div>
+  <h2>Writeups</h2>
+  <!-- writeups -->
+  {% if site.posts.size > 0 %}
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time>{{ post.date | date: "%d %b %Y" }}</time></li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="empty"><b>Coming soon</b>CTF writeups and technical notes will live here.<br><span class="mono">$ ls writeups/ → 0 files</span></div>
+  {% endif %}
+  <!-- /writeups -->
+</section>
+
+<section id="contact">
+  <div class="label">~/contact</div>
+  <h2>Contact</h2>
+  <p class="muted">The best way to reach me is by email.</p>
+  <div class="contact">
+    <a class="addr" id="email" href="mailto:turgutugur00@gmail.com">turgutugur00@gmail.com</a>
+    <button class="btn" id="copy-btn" type="button">Copy</button>
+    <span id="copy-note" aria-live="polite"></span>
   </div>
 </section>
 </main>
 
-<footer id="contact"><div class="wrap">
-  <p>Get in touch: <a href="mailto:turgutugur00@gmail.com">turgutugur00@gmail.com</a> ·
-  <a href="https://github.com/ugurturgut1">GitHub</a> ·
-  <a href="https://linkedin.com/in/turgut-ugur">LinkedIn</a></p>
-</div></footer>
+<footer><div class="wrap">© 2026 Ugur Turgut · Manchester, UK</div></footer>
 
+<script>
+(function () {
+  // Stylised HPGP preamble burst, not real capture data.
+  var svg = document.getElementById('trace'), W = 800, H = 180, NS = 'http://www.w3.org/2000/svg', grid = '', d = '';
+  for (var x = 0; x <= W; x += 80) grid += 'M' + x + ' 0V' + H;
+  for (var y = 0; y <= H; y += 36) grid += 'M0 ' + y + 'H' + W;
+  for (var i = 0; i <= W; i++) {
+    var t = i / W, env = 0;
+    if (t > 0.12 && t < 0.88) env = 0.5 - 0.5 * Math.cos(2 * Math.PI * Math.min(1, (t - 0.12) / 0.76 * 1.15));
+    var v = env * 62 * Math.sin(2 * Math.PI * (40 * t + 30 * t * t)) + 2.5 * Math.sin(i * 1.7);
+    d += (i ? 'L' : 'M') + i + ' ' + (H / 2 - v).toFixed(1);
+  }
+  [[grid, '#18202a', 1], [d, '#4fd1e8', 1.6]].forEach(function (a) {
+    var p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', a[0]); p.setAttribute('stroke', a[1]); p.setAttribute('stroke-width', a[2]); p.setAttribute('fill', 'none');
+    svg.appendChild(p);
+  });
+
+  var note = document.getElementById('copy-note'), email = document.getElementById('email');
+  document.getElementById('copy-btn').addEventListener('click', function () {
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      note.textContent = 'Selected, press Ctrl/Cmd+C';
+    };
+    try { navigator.clipboard.writeText(email.textContent).then(function () { note.textContent = 'Copied'; }, fallback); }
+    catch (e) { fallback(); }
+  });
+})();
+</script>
 </body>
 </html>
